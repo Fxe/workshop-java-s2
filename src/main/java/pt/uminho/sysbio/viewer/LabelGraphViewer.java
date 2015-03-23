@@ -1,0 +1,33 @@
+package pt.uminho.sysbio.viewer;
+
+import edu.uci.ics.jung.algorithms.layout.FRLayout;
+import edu.uci.ics.jung.graph.Graph;
+import edu.uci.ics.jung.visualization.VisualizationViewer;
+import edu.uci.ics.jung.visualization.control.DefaultModalGraphMouse;
+import edu.uci.ics.jung.visualization.control.ModalGraphMouse;
+import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
+import edu.uci.ics.jung.visualization.renderers.*;
+import edu.uci.ics.jung.visualization.renderers.Renderer;
+
+import javax.swing.*;
+
+/**
+ * Created by Filipe on 23/03/2015.
+ */
+public class LabelGraphViewer {
+
+    public static<V,E> void view(Graph<V, E> g) {
+        JFrame jf = new JFrame();
+        VisualizationViewer<V, E> vv = new VisualizationViewer<V, E>(new FRLayout<V, E>(g));
+        vv.getRenderContext().setVertexLabelTransformer(new ToStringLabeller<V>());
+        vv.getRenderContext().setEdgeLabelTransformer(new ToStringLabeller<E>());
+        vv.getRenderer().getVertexLabelRenderer().setPosition(Renderer.VertexLabel.Position.CNTR);
+        DefaultModalGraphMouse<V, E> gm = new DefaultModalGraphMouse<V, E>();
+        gm.setMode(ModalGraphMouse.Mode.TRANSFORMING);
+        vv.setGraphMouse(gm);
+        jf.getContentPane().add(vv);
+        jf.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        jf.pack();
+        jf.setVisible(true);
+    }
+}
