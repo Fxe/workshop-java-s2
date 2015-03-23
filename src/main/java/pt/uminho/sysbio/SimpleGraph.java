@@ -1,8 +1,6 @@
 package pt.uminho.sysbio;
 
 import pt.uminho.sysbio.viewer.LabelGraphViewer;
-import edu.uci.ics.jung.graph.DirectedSparseGraph;
-import edu.uci.ics.jung.graph.Graph;
 
 /**
  * Created by Filipe on 21/03/2015.
@@ -27,20 +25,13 @@ public class SimpleGraph {
 	 * @param args
 	 */
     public static void main( String[] args ) {
-        Graph<String, String> g = new DirectedSparseGraph<String, String> ();
-        for (int i = 0; i < 10; i++) {
-            g.addVertex("v" + i);
-        }
-
-        for (int i = 0; i < 50; i++) {
-            String v1 = "v" + (int)(Math.random() * 10);
-            String v2 = "v" + (int)(Math.random() * 10);
-            g.addEdge("e" + i, v1, v2);
-        }
-
-        System.out.println( g.toString() );
-
-        LabelGraphViewer.view(g);
-
+    	//create graph
+    	
+    	//add vertexes
+    	
+    	//add edges
+    	
+    	//visualize graph (change null to your graph object !)
+    	LabelGraphViewer.view( null );
     }
 }
