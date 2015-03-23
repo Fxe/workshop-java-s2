@@ -1,19 +1,31 @@
 package pt.uminho.sysbio;
 
-import edu.uci.ics.jung.algorithms.layout.FRLayout;
-import edu.uci.ics.jung.algorithms.shortestpath.DijkstraShortestPath;
-import edu.uci.ics.jung.graph.Graph;
-import edu.uci.ics.jung.graph.DirectedSparseGraph;
-import edu.uci.ics.jung.visualization.VisualizationViewer;
 import pt.uminho.sysbio.viewer.LabelGraphViewer;
-import pt.uminho.sysbio.viewer.SimpleGraphViewer;
-
-import javax.swing.*;
+import edu.uci.ics.jung.graph.DirectedSparseGraph;
+import edu.uci.ics.jung.graph.Graph;
 
 /**
  * Created by Filipe on 21/03/2015.
  */
-public class App {
+public class SimpleGraph {
+	/**
+	 * Create and visualize a simple graph
+	 * 
+	 * v1
+	 * v2
+	 * v3
+	 * v4
+	 * v5
+	 * 
+	 * e1 (v1, v2)
+	 * e2 (v2, v3)
+	 * e3 (v3, v4)
+	 * e4 (v1, v5)
+	 * e5 (v5, v4)
+	 * e6 (v1, v1)
+	 * 
+	 * @param args
+	 */
     public static void main( String[] args ) {
         Graph<String, String> g = new DirectedSparseGraph<String, String> ();
         for (int i = 0; i < 10; i++) {

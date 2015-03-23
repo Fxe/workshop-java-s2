@@ -1,15 +1,15 @@
 package pt.uminho.sysbio.viewer;
 
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+
 import edu.uci.ics.jung.algorithms.layout.FRLayout;
 import edu.uci.ics.jung.graph.Graph;
 import edu.uci.ics.jung.visualization.VisualizationViewer;
 import edu.uci.ics.jung.visualization.control.DefaultModalGraphMouse;
 import edu.uci.ics.jung.visualization.control.ModalGraphMouse;
 import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
-import edu.uci.ics.jung.visualization.renderers.*;
 import edu.uci.ics.jung.visualization.renderers.Renderer;
-
-import javax.swing.*;
 
 /**
  * Created by Filipe on 23/03/2015.
