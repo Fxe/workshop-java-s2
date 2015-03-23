@@ -11,8 +11,7 @@ import pt.uminho.sysbio.viewer.SimpleGraphViewer;
 import javax.swing.*;
 
 /**
- * Hello world!
- *
+ * Created by Filipe on 21/03/2015.
  */
 public class App {
     public static void main( String[] args ) {
@@ -27,10 +26,8 @@ public class App {
             g.addEdge("e" + i, v1, v2);
         }
 
-        DijkstraShortestPath<String, String> sp = new DijkstraShortestPath<String, String>(g);
-
         System.out.println( g.toString() );
-        System.out.println( sp.getPath("v9", "v7"));
+
         LabelGraphViewer.view(g);
 
     }
